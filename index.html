@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kunstverk Detaljert - Artworks Gallery</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="../index.html" class="logo">🎨 Art Gallery</a>
+      <nav class="main-nav">
+        <a href="../account/login.html">Logg inn</a>
+        <a href="../account/register.html">Registrer</a>
+      </nav>
+    </header>
+
+    <main>
+      <div id="loading">Laster kunstverk...</div>
+      <div id="error-message" class="error"></div>
+
+      <section id="artwork-detail" class="artwork-detail hidden">
+        <div class="artwork-shape">
+          <img id="artwork-image" alt="Kunstbilde" />
+          <div class="artwork-info">
+            <h1 id="artwork-title"></h1>
+            <p><strong>Kunstner:</strong> <span id="artwork-artist"></span></p>
+            <p><strong>År:</strong> <span id="artwork-year"></span></p>
+            <p><strong>Medium:</strong> <span id="artwork-medium"></span></p>
+            <p>
+              <strong>Plassering:</strong> <span id="artwork-location"></span>
+            </p>
+            <p><strong>Beskrivelse:</strong></p>
+            <p id="artwork-description"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/artwork-detail.js"></script>
+  </body>
+</html>

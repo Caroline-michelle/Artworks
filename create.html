@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opprett kunstverk</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="logo">🎨 Art Gallery</a>
+    <nav class="main-nav">
+        <a href="../index.html" id="logout-link">Logg ut</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="create-page">
+        <h1>Publiser nytt kunstverk</h1>
+        <form id="create-form">
+          <div class="form-group">
+            <label for="title">Tittel</label>
+            <input type="text" name="title" id="title" required />
+          </div>
+      
+          <div class="form-row">
+            <div class="form-group">
+              <label for="artist">Kunstner</label>
+              <input type="text" name="artist" id="artist" required />
+            </div>
+            <div class="form-group">
+              <label for="year">År</label>
+              <input type="number" name="year" id="year" required min="0" />
+            </div>
+            <div class="form-group">
+              <label for="medium">Medium</label>
+              <input type="text" name="medium" id="medium" required />
+            </div>
+          </div>
+      
+          <div class="form-row">
+            <div class="form-group">
+              <label for="location">Plassering</label>
+              <input type="text" name="location" id="location" required />
+            </div>
+            <div class="form-group">
+              <label for="imageUrl">Bilde-URL</label>
+              <input type="url" name="imageUrl" id="imageUrl" required />
+            </div>
+            <div class="form-group">
+              <label for="imageAlt">Bildebeskrivelse</label>
+              <input type="text" name="imageAlt" id="imageAlt" required />
+            </div>
+          </div>
+      
+          <div class="form-group">
+            <label for="description">Beskrivelse</label>
+            <textarea name="description" id="description" rows="8" required></textarea>
+          </div>
+      
+          <button type="submit">Publiser kunstverk</button>
+        </form>
+        <div id="create-message" class="message"></div>
+        <div id="toast-success" class="toast hidden">🎉 Kunstverket ble publisert!</div>
+      </section>
+  </main>
+  <script type="module" src="../js/auth.js"></script>
+  <script type="module" src="../js/create.js"></script>
+</body>
+</html
